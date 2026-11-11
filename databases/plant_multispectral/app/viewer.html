@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>單株多光譜資料庫｜Greenhouse</title><link rel="stylesheet" href="viewer.css"><script src="viewer.js" defer></script></head>
+<body>
+<header><div class="wrap header-inner"><a class="brand" href="./"><span class="brand-mark">G</span><span>GREENHOUSE <small>／ 多光譜資料</small></span></a><span class="private-label">私人唯讀預覽</span></div></header>
+<main class="wrap">
+ <div class="intro"><div><p class="eyebrow">SINGLE-PLANT SPECTRAL ARCHIVE</p><h1>單株影像，逐筆查看。</h1><p class="subtitle">依批次、光照與拍攝日期，瀏覽SAM單株裁切影像及NDVI。</p></div><div class="basis"><b>NDVI · DN基礎</b><span>反射率校正尚未確認</span></div></div>
+ <section class="metrics" aria-label="資料總覽"><div><span>單株拍攝紀錄</span><strong id="metric-observations">—</strong></div><div><span>16波段圖片</span><strong id="metric-bands">—</strong></div><div><span>NDVI已計算</span><strong id="metric-computed">—</strong></div><div><span>空遮罩紀錄</span><strong id="metric-empty">—</strong></div></section>
+ <section class="archive" aria-labelledby="archive-heading">
+  <div class="section-heading"><div><h2 id="archive-heading">影像與指數</h2><p>每列是一株在一次拍攝中的紀錄，16個波段歸在同一筆。</p></div><a id="export" class="button secondary" href="api/export.csv">匯出篩選結果 CSV ↗</a></div>
+  <form id="filters">
+   <label>批次<select name="batch" id="batch"><option value="">全部批次</option></select></label>
+   <label>光照<select name="light" id="light"><option value="">全部光照</option></select></label>
+   <label>拍攝日期<select name="date" id="date"><option value="">全部日期</option></select></label>
+   <label>單株編號<input name="plant" type="number" min="1" max="21" placeholder="例如 1" inputmode="numeric"></label>
+   <label>分割品質<select name="quality"><option value="">全部品質</option><option value="ok">正常</option><option value="tiny_or_sparse_plant">極小／稀疏</option><option value="no_visible_plant">未見植株</option></select></label>
+   <label>排序<select name="sort"><option value="time">時間由早到晚</option><option value="ndvi_desc">NDVI由高到低</option><option value="ndvi_asc">NDVI由低到高</option></select></label>
+   <div class="filter-actions"><button class="button" type="submit">查詢</button><button class="text-button" type="reset">清除</button></div>
+   <label class="checkbox"><input type="checkbox" name="computed" value="1"> 只看有NDVI數值的紀錄</label>
+  </form>
+  <div class="list-status"><p id="list-status" role="status" aria-live="polite">正在連接資料庫…</p><span id="page-status"></span></div>
+  <div id="error" class="error" role="alert" hidden></div>
+  <div class="table-scroll"><table><thead><tr><th>單株預覽</th><th>批次／光照</th><th>拍攝時間</th><th>單株編號</th><th>NDVI平均值</th><th>分割品質</th><th><span class="sr-only">查看明細</span></th></tr></thead><tbody id="rows"><tr><td colspan="7" class="empty">載入中…</td></tr></tbody></table></div>
+  <div class="pagination"><span id="range"></span><div><button id="previous" class="button secondary" type="button" disabled>← 上一頁</button><button id="next" class="button secondary" type="button" disabled>下一頁 →</button></div></div>
+ </section>
+ <section class="batch-summary"><h2>批次紀錄</h2><div id="batch-summary"></div></section>
+ <p class="method-note">計算方式：在單株遮罩內，逐像素計算 (L800 − L680) ÷ (L800 + L680)，再取得平均值。空遮罩沒有數值，不以0代替。單株編號沿用SAM配置紀錄。</p>
+</main><footer class="wrap">資料與圖片存放於遠端主機 · 本頁僅供查詢，沒有修改資料的功能。</footer>
+<dialog id="detail" aria-labelledby="detail-title"><div class="dialog-top"><div><p class="eyebrow">OBSERVATION DETAIL</p><h2 id="detail-title">單株明細</h2></div><button id="close-detail" class="close-button" aria-label="關閉明細" type="button">✕</button></div><div id="detail-content"><p>讀取中…</p></div></dialog>
+</body></html>

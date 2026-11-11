@@ -1,0 +1,6 @@
+{
+  "models/clip_dinov2/artifacts/legacy9/regressors.joblib": "58cb450f3ee7852295f1c03433263ca6d851fbea7d36f8e52339e71478ca753b",
+  "models/clip_dinov2/artifacts/legacy9/selectors.pt": "e040912c720b224ce5ee0e817b8eb008c2ac157203ed41a272b5ec852db5e904",
+  "models/clip_dinov2/artifacts/native11/regressors.joblib": "caa2fdff0e18802b641a4aeb540e32092ac8423ee92cde2e487267fce5b074cd",
+  "models/clip_dinov2/artifacts/native11/selectors.pt": "b5e68a70660bf0f463ca26d43b2ed52a2e0510a7815eeca6513c1069182b5d42"
+}

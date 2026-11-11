@@ -1,0 +1,31 @@
+{
+  "model_family": "frozen_clip_dinov2_legacy_ensemble",
+  "target_names": [
+    "pGH",
+    "pTLA",
+    "pPLA",
+    "pLAA",
+    "pCHA",
+    "pE",
+    "pMW"
+  ],
+  "samples": 9,
+  "selector_components": 8,
+  "epochs": 800,
+  "seeds": 5,
+  "fixed_clip_weight": 0.5,
+  "backbones_updated": false,
+  "preprocessing": "CLIP official transform; DINO Resize256/CenterCrop224/ImageNet normalization",
+  "views": "4 cameras, 6 ordered acquisition positions per camera, 24 full-frame RGB images",
+  "coordinate_unit": "VENDOR_UNIT_UNVERIFIED",
+  "label_schema": "VENDOR_NATIVE",
+  "full_data_fit": true,
+  "held_out_score_from_this_fit": null,
+  "training_losses_not_validation_scores": [
+    0.0024720560759305954,
+    0.003794840071350336,
+    0.0016136541962623596,
+    0.0017498380038887262,
+    0.0026974801439791918
+  ]
+}

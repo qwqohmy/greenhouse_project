@@ -1,0 +1,66 @@
+[
+  {
+    "model": "legacy9",
+    "samples": 9,
+    "full_fit": true,
+    "reload_matches": true,
+    "cv_score_not_recomputed": true
+  },
+  {
+    "model": "native11",
+    "samples": 11,
+    "full_fit": true,
+    "reload_matches": true,
+    "cv_score_not_recomputed": true
+  },
+  {
+    "model": "rgb_proxy",
+    "bytes": 37153973,
+    "sha256": "ab0f326a2c9b8c00ccdea244be6342621dafed5cd073e28d93aa03af0b26b327",
+    "adapter_tensors_unchanged": true,
+    "target_names": [
+      "pGH_proxy",
+      "pMW_proxy"
+    ]
+  },
+  {
+    "model": "rgb_native",
+    "bytes": 37172066,
+    "sha256": "b58041009ba15ba4b3cf7d96f604b7726b851e7bfda83b8db78a21cb891930b8",
+    "adapter_tensors_unchanged": true,
+    "target_names": [
+      "pGH",
+      "pTLA",
+      "pPLA",
+      "pLAA",
+      "pCHA",
+      "pE",
+      "pMW"
+    ]
+  },
+  {
+    "model": "sam_proxy",
+    "bytes": 37154101,
+    "sha256": "6b643d2e755ad16257525673b871737f53eeb44ce1081ff0c112ff6ffe2e7285",
+    "adapter_tensors_unchanged": true,
+    "target_names": [
+      "pGH_proxy",
+      "pMW_proxy"
+    ]
+  },
+  {
+    "model": "sam_native",
+    "bytes": 37172130,
+    "sha256": "26785f393dce1809dc27f1f1580df9907dd9e93f509ee2952d5fc5fb44cba3c0",
+    "adapter_tensors_unchanged": true,
+    "target_names": [
+      "pGH",
+      "pTLA",
+      "pPLA",
+      "pLAA",
+      "pCHA",
+      "pE",
+      "pMW"
+    ]
+  }
+]
