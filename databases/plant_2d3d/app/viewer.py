@@ -10,6 +10,7 @@ from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from urllib.parse import parse_qs,urlsplit
 
 from database import BASE,connect
+from dataset_gallery import handle_gallery
 
 DEPLOY=json.loads((BASE/'deployment.json').read_text(encoding='utf-8'))
 PRIVATE=json.loads(Path(DEPLOY['credentials_file']).read_text(encoding='utf-8'))
@@ -102,7 +103,8 @@ class Handler(BaseHTTPRequestHandler):
         if not parsed.path.startswith(PREFIX):
             self.send('Not found','text/plain; charset=utf-8',404);return
         route=parsed.path[len(PREFIX):]
-        if route=='':
+        if handle_gallery(self,route,parsed.query,BASE):return
+        if route=='records':
             self.send((BASE/'viewer.html').read_bytes(),'text/html; charset=utf-8');return
         if route=='time-candidates.js':
             self.send((BASE/'time-candidates.js').read_bytes(),'application/javascript; charset=utf-8');return

@@ -12,6 +12,7 @@ from urllib.parse import parse_qs,urlsplit
 import numpy as np
 from PIL import Image
 from database import BASE,pymysql
+from dataset_gallery import handle_gallery
 
 SETTINGS=json.loads((BASE/'.private'/'viewer.json').read_text(encoding='utf-8'))
 PREFIX='/s/'+SETTINGS['share_token']+'/'
@@ -136,7 +137,8 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path=='/healthz':self.data({'ok':bool(select('SELECT 1 AS ok',one=True))});return
         if not parsed.path.startswith(PREFIX):self.send('Not found','text/plain',404);return
         route=parsed.path[len(PREFIX):];query=parse_qs(parsed.query)
-        static={'':('viewer.html','text/html; charset=utf-8'),'viewer.css':('viewer.css','text/css; charset=utf-8'),'viewer.js':('viewer.js','application/javascript; charset=utf-8')}
+        if handle_gallery(self,route,parsed.query,BASE):return
+        static={'records':('viewer.html','text/html; charset=utf-8'),'viewer.css':('viewer.css','text/css; charset=utf-8'),'viewer.js':('viewer.js','application/javascript; charset=utf-8')}
         if route in static:
             name,mime=static[route];self.send((BASE/name).read_bytes(),mime);return
         if route=='api/overview':

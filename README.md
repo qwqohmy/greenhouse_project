@@ -10,7 +10,9 @@
 | [2D→3D 資料庫](https://twice-garage-changing-price.trycloudflare.com/s/qDiiDCQACNOca9kx6LVDRSEUhiOCfbJj/) | 影像、原廠／PLY 衍生數值、配對狀態與 CSV 查詢 |
 | [SAM 單株多光譜資料庫](https://wayne-import-eminem-colony.trycloudflare.com/s/CzPsCiT2eoBiUoBFT2tTPD_SH4nJHvUb/) | 批次、日期、光照、盆號、16 波段、遮罩與 NDVI 查詢 |
 
-連結最後更新：2026-11-19（遠端主機重啟後重新建立公開通道）。
+連結最後更新：2026-11-19（遠端主機重啟後重新建立公開通道）。首頁改為生菜／番茄影像圖庫，每格是一筆植株當日觀測；原本表型、NDVI 與 CSV 查詢保留在頁面右上角入口。
+
+目前圖庫展示：生菜2D 12筆、番茄2D 10筆、生菜多光譜12筆、番茄多光譜12筆。番茄2D只找到10個不同日期，12格版面中最後兩格標示待補，沒有用同日不同角度充數。這些是展示觀測，不代表新增同等數量的已核准訓練配對；原始MySQL資料筆數與模型評估不變。
 
 這兩個網址為遠端主機提供的 **臨時唯讀連結**，需主機、網站程序與 Cloudflare tunnel 持續運作。停止或重建 tunnel 後網址可能變更。依專案負責人要求，GitHub **僅提供資料庫連結與結構／程式碼，不上傳資料庫內容、SQL 資料備份或原始影像**。
 

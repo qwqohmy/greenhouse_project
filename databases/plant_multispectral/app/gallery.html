@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>植物影像資料集｜Greenhouse</title><link rel="stylesheet" href="gallery.css"></head>
+<body><header><a class="brand" href="./">GREENHOUSE / 影像資料集</a><a id="records" href="records">資料查詢與 CSV</a></header>
+<main><div class="intro"><h1 id="title">植物影像資料集</h1><p id="subtitle">正在讀取真實影像…</p></div>
+<div class="toolbar"><nav aria-label="作物"><button id="lettuce" aria-pressed="true">生菜（萵苣）</button><button id="tomato" aria-pressed="false">番茄</button></nav>
+<div class="downloads"><a id="sheet" href="#">下載整張示例 JPG</a><a id="jpgs" href="#">下載個別 JPG</a></div></div>
+<p id="status" role="status"></p><p id="error" role="alert" hidden></p><section id="gallery" class="gallery" aria-label="植株當日觀測影像"></section>
+<footer><p>每格是一筆植株當日觀測。同一株在不同日期可分別展示；同日不同角度或波段不重複充作樣本。</p>
+<p>JPG 為展示用預覽，原始影像及表型答案不變。影像展示筆數不等於已完成表型配對的訓練筆數。</p><p id="spectral-note" hidden>多光譜固定展示 540 nm；只調整顯示亮度，原始16位元資料不變。番茄畫面盆位為展示編號，跨日實體盆號尚未另認證。</p></footer></main>
+<script src="gallery.js"></script></body></html>
