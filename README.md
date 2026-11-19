@@ -7,8 +7,10 @@
 
 | 網站 | 內容 |
 | --- | --- |
-| [2D→3D 資料庫](https://foto-means-rendered-ensuring.trycloudflare.com/s/qDiiDCQACNOca9kx6LVDRSEUhiOCfbJj/) | 影像、原廠／PLY 衍生數值、配對狀態與 CSV 查詢 |
-| [SAM 單株多光譜資料庫](https://invited-johnston-focused-luis.trycloudflare.com/s/CzPsCiT2eoBiUoBFT2tTPD_SH4nJHvUb/) | 批次、日期、光照、盆號、16 波段、遮罩與 NDVI 查詢 |
+| [2D→3D 資料庫](https://twice-garage-changing-price.trycloudflare.com/s/qDiiDCQACNOca9kx6LVDRSEUhiOCfbJj/) | 影像、原廠／PLY 衍生數值、配對狀態與 CSV 查詢 |
+| [SAM 單株多光譜資料庫](https://wayne-import-eminem-colony.trycloudflare.com/s/CzPsCiT2eoBiUoBFT2tTPD_SH4nJHvUb/) | 批次、日期、光照、盆號、16 波段、遮罩與 NDVI 查詢 |
+
+連結最後更新：2026-11-19（遠端主機重啟後重新建立公開通道）。
 
 這兩個網址為遠端主機提供的 **臨時唯讀連結**，需主機、網站程序與 Cloudflare tunnel 持續運作。停止或重建 tunnel 後網址可能變更。依專案負責人要求，GitHub **僅提供資料庫連結與結構／程式碼，不上傳資料庫內容、SQL 資料備份或原始影像**。
 

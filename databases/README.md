@@ -1,7 +1,9 @@
 # 資料庫網站與原始碼
 
-- [2D→3D 表型資料庫](https://foto-means-rendered-ensuring.trycloudflare.com/s/qDiiDCQACNOca9kx6LVDRSEUhiOCfbJj/)
-- [SAM 單株多光譜／NDVI 資料庫](https://invited-johnston-focused-luis.trycloudflare.com/s/CzPsCiT2eoBiUoBFT2tTPD_SH4nJHvUb/)
+- [2D→3D 表型資料庫](https://twice-garage-changing-price.trycloudflare.com/s/qDiiDCQACNOca9kx6LVDRSEUhiOCfbJj/)
+- [SAM 單株多光譜／NDVI 資料庫](https://wayne-import-eminem-colony.trycloudflare.com/s/CzPsCiT2eoBiUoBFT2tTPD_SH4nJHvUb/)
+
+連結更新日期：2026-11-19。
 
 依專案負責人要求，資料庫內容**只透過網站連結提供**，不放 SQL 資料備份、JSON 資料快照或原始圖片。網站的 CSV 下載仍依既有唯讀介面提供。連結為臨時 tunnel，可能因遠端重啟而失效。
 
